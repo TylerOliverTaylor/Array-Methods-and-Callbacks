@@ -1,8 +1,8 @@
 import { fifaData } from './fifa.js';
-console.log(fifaData);
+// console.log(fifaData);
 
-console.log('its working');
-// ⚽️ M  V P ⚽️ //
+// console.log('its working');
+// // ⚽️ M  V P ⚽️ //
 
 /* Task 1: Investigate the data above. Practice accessing data by console.log-ing the following pieces of data 
 
@@ -11,6 +11,53 @@ console.log('its working');
 (c) Home Team goals for 2014 world cup final
 (d) Away Team goals for 2014 world cup final
 (e) Winner of 2014 world cup final */
+const data2014 = [
+    {
+    "Year": 2014,
+    "Datetime": "13 Jul 2014 - 16:00",
+    "Stage": "Final",
+    "Stadium": "Estadio do Maracana",
+    "City": "Rio De Janeiro",
+    "Home Team Name": "Germany",
+    "Home Team Goals": 1,
+    "Away Team Goals": 0,
+    "Away Team Name": "Argentina",
+    "Win conditions": "Germany win after extra time",
+    "Attendance": 74738,
+    "Half-time Home Goals": 0,
+    "Half-time Away Goals": 0,
+    "Referee": "Nicola RIZZOLI (ITA)",
+    "Assistant 1": "Renato FAVERANI (ITA)",
+    "Assistant 2": "Andrea STEFANI (ITA)",
+    "RoundID": 255959,
+    "MatchID": 300186501,
+    "Home Team Initials": "GER",
+    "Away Team Initials": "ARG"
+  }];
+const homeTeamName = data2014.map((data) => {
+    return {'Home Team Name': data["Home Team Name"]}
+})
+
+const awayTeamName = data2014.map((data) => {
+    return {'Away Team Name': data["Away Team Name"]}
+})
+
+const homeTeamGoals = data2014.map((data) => {
+    return {'Home Team Goals': data["Home Team Goals"]}
+})
+
+const awayTeamGoals = data2014.map((data) => {
+    return {'Away Team Goals': data["Away Team Goals"]}
+})
+
+const winConditions = data2014.map((data) => {
+    return {'Win Conditions': data["Win conditions"]}
+})
+console.log(homeTeamName)
+console.log(awayTeamName)
+console.log(homeTeamGoals)
+console.log(awayTeamGoals)
+console.log(winConditions)
 
 
 /* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
